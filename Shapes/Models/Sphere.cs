@@ -13,15 +13,16 @@ namespace Shapes.Models
 
     public double GetVolume()
     {
-      double radius2 = ClassRadius.Radius * ClassRadius.Radius * ClassRadius.Radius;
-      double volume = (radius2 * 3.14) * (4/3);
+      double radius3 = Math.Pow(ClassRadius.Radius, 3);
+      double volume = (4/3) * 3.14 * radius3;
       return volume;
     }
 
-    // public double GetSurfaceArea()
-    // {
-    //   int area
-    // }
+    public double GetSurfaceArea()
+    {
+      double area = 4 * (3.14 * (Math.Pow(ClassRadius.Radius, 2)));
+      return area;
+    }
 
   }
 }
